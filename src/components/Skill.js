@@ -21,22 +21,7 @@ function Skill() {
       "img":"logo192.png",
       "text":"4"
     },
-    {
-      "img":"html.png",
-      "text":"1"
-    },
-    {
-      "img":"css.png",
-      "text":"2"
-    },
-    {
-      "img":"javascript.png",
-      "text":"3"
-    },
-    {
-      "img":"logo192.png",
-      "text":"4"
-    },
+    
     
   ]
 
@@ -48,8 +33,8 @@ function Skill() {
         return (
           <>
           <div>
-          <img src={e.img} width={100} height={100} />
-          {e.text}
+          <img className='h-24 w-24' src={e.img} width={100} height={100} />
+          
           </div>
           </>
         )

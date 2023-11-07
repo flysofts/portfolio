@@ -5,6 +5,7 @@ import About from './components/About';
 import Work from './components/Work';
 import Skill from './components/Skill';
 import { useEffect, useState } from 'react';
+import Contact from './components/Contact';
 
 
 
@@ -17,8 +18,9 @@ function App() {
     <div>
   <Home/>
   <About/>
-  <Skill/>
+  <Skill></Skill>
   <Work></Work>
+  <Contact></Contact>
     </div>
   
     
