@@ -16,7 +16,7 @@ function Work() {
   return (
     <>
     <div className='text-center w-32 text-4xl  m-auto mt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500'>WORK</div>
-    <div className='lg:pl-32'>
+    <div className='max-w-7xl lg:max-w-full'>
     <Swiper
         effect={'coverflow'}
         grabCursor={true}

@@ -32,7 +32,7 @@ function Home() {
   return (
     <>
     <div>
-      <div className='w-full  h-screen' style={{ backgroundImage: "url(/background.jpg)"}}>
+      <div className='w-full  h-screen' style={{ backgroundImage: "url(/background.jpg)" , backgroundSize: "cover" , backgroundRepeat: "no-repeat",backgroundAttachment: 'fixed'}}>
         <header className='w-full flex justify-between items-center pt-5 pb-3 fixed bg-stone-700 bg-opacity-25 pl-5'>
                <li><a className='text-white '>JIHAWN</a></li>
           <nav className='pl-32 max-lg:hidden'>
