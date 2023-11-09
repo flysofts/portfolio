@@ -10,6 +10,7 @@ function Home() {
 
   const [mainTitle, setMainTitle] = useState('');
   const [count, setCount] = useState(0);
+
   useEffect(() => {
     const typingInterval = setInterval(() => {
       setMainTitle((prevTitleValue) => {
@@ -18,7 +19,7 @@ function Home() {
 
         if (count >= Title.length) {
           setCount(0);
-          setMainTitle('');
+          setMainTitle(''); 
         }
 
         return result;
@@ -28,7 +29,7 @@ function Home() {
     return () => {
       clearInterval(typingInterval);
     };
-  });
+  },);
   return (
     <>
     <div>

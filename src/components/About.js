@@ -6,10 +6,28 @@ function About() {
       <div>
         <p className='text-center w-32 text-4xl  m-auto mt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500'>About</p>
         <div className='max-w-7xl flex flex-wrap justify-center lg:flex-nowrap m-auto'>
-          <img  src='http://placeholder.com/480x480'/>
-        <div className='border-4 rounded-xl p-6 mt-10 mx-20'>
-          <p className='mb-12 text-4xl max-lg:text-2xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, iusto.</p>
-          <p className='text-justify max-lg:mr-10 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nostrum inventore harum tenetur ducimus rem sit, ab rerum perferendis ipsam fugiat minus ipsum. Sit distinctio officiis omnis assumenda aliquid fuga qui dicta debitis, exercitationem dolor nesciunt sed perferendis accusantium modi.</p>
+          <div className='flex-row'>
+
+          <p className='sm:text-sm md:text-lg text-center lg:text-3xl mt-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam numquam</p>
+          <p className='sm:text-sm md:text-lg text-center lg:text-3xl mt-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, numquam.</p>
+          </div>
+          <div className=''>
+        <div className='border-4 rounded-xl py-10 px-16  mx-20 mb-5'>
+          <p>NAME</p>
+          <p>박지환</p>
+        </div>
+        <div className='border-4 rounded-xl py-10 px-16  mx-20 mb-5'>
+          <p>EMAIL</p>
+          <p>ds4950@naver.com</p>
+        </div>
+        <div className='border-4 rounded-xl py-10 px-16  mx-20 mb-5'>
+          <p>lorem</p>
+          <p>lorem</p>
+        </div>
+        <div className='border-4 rounded-xl py-10 px-16  mx-20 mb-5'>
+          <p>lorem</p>
+          <p>lorem</p>
+        </div>
         </div>
         </div>
       </div>

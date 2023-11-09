@@ -34,6 +34,12 @@ function Skill() {
     {
       "img":"nodejs.png"
     },
+    {
+      "img":"express.png"
+    },
+    {
+      "img":"mysql.png"
+    }
    
   ]
 
@@ -43,6 +49,9 @@ function Skill() {
     },
     {
       "img":"git.png"
+    },
+    {
+      "img":"vscode.png"
     }
   ]
   return (
