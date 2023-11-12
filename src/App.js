@@ -12,15 +12,16 @@ import Contact from './components/Contact';
 
 
 
+
 function App() {
   return (
     <>
     <div>
   <Home/>
   <About/>
-  <Skill></Skill>
-  <Work></Work>
-  <Contact></Contact>
+  <Skill/>
+  <Work/>
+  <Contact/>
     </div>
   
     

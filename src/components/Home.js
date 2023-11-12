@@ -27,30 +27,25 @@ function Home() {
 
 
   useEffect(() => {
-    const typingInterval = setInterval(() => {
-      setMainTitle((prevTitleValue) => {
-        let result = prevTitleValue ? prevTitleValue + Title[count] : Title[0];
+    if (count < Title.length) {
+      const typingTimeout = setTimeout(() => {
+        setMainTitle((prevTitleValue) => {
+          return prevTitleValue + Title[count];
+        });
         setCount(count + 1);
+      }, 200);
 
-        if (count >= Title.length) {
-          setCount(0);
-          setMainTitle('');
-        }
-
-        return result;
-      });
-    }, 200);
-
-    return () => {
-      clearInterval(typingInterval);
-    };
+      return () => {
+        clearTimeout(typingTimeout);
+      };
+    }
   }, [count]);
   return (
     <>
 
       <div name="HOME">
         <div className={`w-full h-screen ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background.jpg)", backgroundSize: "cover", backgroundRepeat: "no-repeat",  }}>
-          <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed  bg-opacity-25 z-30 pl-5 bg-stone-700 '>
+          <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed  bg-opacity-25 z-30 pl-5 bg-stone-700 border-b-2 border-b-neutral-600 dark:bg-'>
             <li><Link to="HOME" smooth={true} className='text-white text-xl pl-64 font-pretty' href='#'>HAWN</Link></li>
             <nav className='pl-32 max-2xl:hidden'>
               <ul className='flex justify-between  gap-24 pr-24'>
