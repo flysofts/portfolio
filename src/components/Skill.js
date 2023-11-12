@@ -43,7 +43,7 @@ function Skill() {
       "text": "안녕"
     },
     {
-      "img": "mongodb.svg",
+      "img": "mongoDB.svg",
       "text": "안녕"
     },
     {
