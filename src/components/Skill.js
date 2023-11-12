@@ -1,111 +1,134 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5} from "@fortawesome/free-solid-svg-icons"
+import { faHtml5 } from "@fortawesome/free-solid-svg-icons"
+import { useSelector } from 'react-redux'
+
 
 function Skill() {
-
+  const [showFrontEnd, setShowFrontEnd] = useState(false);
+  const [showBackEnd, setshowBackEnd] = useState(false);
+  const [showTools, setshowTools] = useState(false);
+  const darkMode = useSelector(state => state.darkMode);
   const frontEnd = [
     {
-      "img":"html.png",
-      
+      "img": "html.png",
+      "text": "하이",
     },
     {
-      "img":"css.png",
-      
+      "img": "css.png",
+      "text": "하이",
     },
     {
-      "img":"javascript.png",
-      
+      "img": "javascript.png",
+      "text": "하이",
     },
     {
-      "img":"logo192.png",
-      
+      "img": "logo192.png",
+      "text": "하이",
     },
     {
-      "img":"nextjs.png"
+      "img": "nextjs.png",
+      "text": "하이",
     },
     {
-      "img":"typescript.png"
+      "img": "typescript.png",
+      "text": "하이",
     }
-    
+
   ]
 
   const backEnd = [
     {
-      "img":"nodejs.png"
+      "img": "node.js.svg",
+      "text": "안녕"
     },
     {
-      "img":"express.png"
+      "img": "mongodb.svg",
+      "text": "안녕"
     },
     {
-      "img":"mysql.png"
+      "img": "mysql.png",
+      "text": "안녕"
     }
-   
+
   ]
 
   const tools = [
     {
-      "img":"github.png"
+      "img": "github.svg",
+      "text": "안녕"
     },
     {
-      "img":"git.png"
+      "img": "git.png",
+      "text": "안녕"
     },
     {
-      "img":"vscode.png"
+      "img": "figma.png",
+      "text": "안녕"
+    },
+    {
+      "img": "notion.svg",
+      "text": "안녕"
     }
   ]
+
+  
   return (
     <>
-    <div className='text-center w-32 text-4xl  m-auto mt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500'>SKILL</div>
-
-    <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col'>
-      <div className='w-36 h-36 border-solid border-8 border-indigo-400 rounded-full relative'>
-        <div className='absolute top-12 left-7'>Front-End</div>
-        </div>
-      {
-      frontEnd.map((e,i)=>{
-        return (
-          <>
-          <div>
-          <img  src={e.img} width={150} height={150} />     
+      <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
+        <div className='dark:bg-neutral-600'>
+          <div className="text-center w-32 text-4xl  m-auto pt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50"    >Skills</div>
+          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col '>
+            <div className='w-40 h-40 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)} >
+              <div className='absolute top-14 left-9 font-pretty text-lg' >Front-End</div>
+            </div>
+            {
+              showFrontEnd && frontEnd.map((e, i) => {
+                return (
+                  <div className="relative group overflow-hidden " >
+                    <img className='w-40 h-40 ' src={e.img} width={150} height={150} />
+                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center">{e.text}</p>
+                  </div>
+                )
+              })
+            }
           </div>
-          </>
-        )
-      })}
-      </div>
-      <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
-      <div className='w-36 h-36 border-solid border-8 border-indigo-400 rounded-full relative'>
-        <div className='absolute top-12 left-7'>Back-End</div>
+          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
+            <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
+              <div className='absolute top-14 left-9 font-pretty text-lg'>Back-End</div>
+            </div>
+            {
+              showBackEnd && backEnd.map((e, i) => {
+                return (
+                  <>
+                    <div className='relative group overflow-hidden'>
+                      <img className='w-40 h-40' src={e.img} width={150} height={150} />
+                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center ">{e.text}</p>
+                    </div>
+                  </>
+                )
+              })
+            }
+          </div>
+          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
+            <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
+              <div className='absolute top-14 left-12 font-pretty text-lg'>Tools</div>
+            </div>
+            {
+              showTools && tools.map((e, i) => {
+                return (
+                  <>
+                    <div className='relative group overflow-hidden'>
+                      <img className='w-40 h-40' src={e.img} width={150} height={150}></img>
+                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center">{e.text}</p>
+                    </div>
+                  </>
+                )
+              })
+            }
+          </div>
         </div>
-        {
-          backEnd.map((e,i)=>{
-            return(
-              <>
-              <div>
-                <img src={e.img} width={150} height={150}></img>
-              </div>
-              </>
-            )
-          })
-        }       
       </div>
-      <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
-      <div className='w-36 h-36 border-solid border-8 border-indigo-400 rounded-full relative'>
-      <div className='absolute top-12 left-10'>Tools</div>
-      </div>
-        {
-          tools.map((e,i)=>{
-            return(
-              <>
-              <div>
-                <img src={e.img} width={150} height={150}></img>
-              </div>
-              </>
-            )
-          })
-        }   
-        </div>    
-
     </>
   )
 }
