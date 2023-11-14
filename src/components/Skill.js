@@ -94,10 +94,10 @@ function Skill() {
     <>
       <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600'>        
-          <div className="text-center w-32 text-4xl  m-auto pt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
+          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
           <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-md:flex-col max-lg:justify-start basis-full mt-10 front'>
             <div className='w-40 h-40 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)} >
-              <div className='absolute top-14 left-9 font-pretty text-lg' >Front-End</div>
+              <div className='absolute top-14 left-8 font-omyu text-xl' >Front-End</div>
             </div>
             {
               showFrontEnd && frontEnd.map((e, i) => {
@@ -112,7 +112,7 @@ function Skill() {
           </div>
           <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
             <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
-              <div className='absolute top-14 left-9 font-pretty text-lg'>Back-End</div>
+              <div className='absolute top-14 left-8 font-omyu text-xl'>Back-End</div>
             </div>
             {
               showBackEnd && backEnd.map((e, i) => {
@@ -127,9 +127,9 @@ function Skill() {
               })
             }
           </div>
-          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
+          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10 pb-28'>
             <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
-              <div className='absolute top-14 left-12 font-pretty text-lg'>Tools</div>
+              <div className='absolute top-14 left-12 font-omyu text-xl'>Tools</div>
             </div>
             {
               showTools && tools.map((e, i) => {
