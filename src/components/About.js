@@ -46,7 +46,6 @@ function About() {
             {
               info.map((e,i)=>{
                 return(
-                  
                   <div className='shadow-lg rounded-xl py-5 px-14  mx-20 mb-5 heartbeat dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
                     <div>
                     <FontAwesomeIcon className='absolute top-7 left-4' icon={e.icon} />
