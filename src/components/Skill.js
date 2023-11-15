@@ -5,12 +5,15 @@ import { useSelector } from 'react-redux'
 
 
 function Skill() {
+  const darkMode = useSelector(state => state.darkMode);
   const [showFrontEnd, setShowFrontEnd] = useState(false);
   const [isView, setIsView] = useState(false);
 
+  const [currentFrontEndIndex, setCurrentFrontEndIndex] = useState(0);
+  const [currentBackEndIndex, setCurrentBackEndIndex] = useState(0);
+  const [currentToolsIndex, setCurrentToolsIndex] = useState(0);
   const [showBackEnd, setshowBackEnd] = useState(false);
   const [showTools, setshowTools] = useState(false);
-  const darkMode = useSelector(state => state.darkMode);
   const frontEnd = [
     {
       "img": "html.png",
@@ -74,6 +77,51 @@ function Skill() {
     }
   ]
 
+  useEffect(() => {
+    if(showFrontEnd && currentFrontEndIndex < frontEnd.length) {
+      const timeoutId = setTimeout(() => {
+        setCurrentFrontEndIndex(currentFrontEndIndex + 1);
+      }, 300);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showFrontEnd, currentFrontEndIndex]);
+
+  useEffect(() => {
+    if(!showFrontEnd) {
+      setCurrentFrontEndIndex(0);
+    }
+  }, [showFrontEnd]);
+
+  useEffect(() => {
+    if(showBackEnd && currentBackEndIndex < backEnd.length) {
+      const timeoutId = setTimeout(() => {
+        setCurrentBackEndIndex(currentBackEndIndex + 1);
+      }, 300);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showBackEnd, currentBackEndIndex]);
+  
+  useEffect(() => {
+    if(!showBackEnd) {
+      setCurrentBackEndIndex(0);
+    }
+  }, [showBackEnd]);
+  
+  useEffect(() => {
+    if(showTools && currentToolsIndex < tools.length) {
+      const timeoutId = setTimeout(() => {
+        setCurrentToolsIndex(currentToolsIndex + 1);
+      }, 300);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showTools, currentToolsIndex]);
+  
+  useEffect(() => {
+    if(!showTools) {
+      setCurrentToolsIndex(0);
+    }
+  }, [showTools]);
+
   useEffect(()=>{
     const scrollEvent = ()=>{
         const rect = document.querySelector(".front").getBoundingClientRect();        
@@ -95,12 +143,12 @@ function Skill() {
       <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600'>        
           <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
-          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-md:flex-col max-lg:justify-start basis-full mt-10 front'>
-            <div className='w-40 h-40 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)} >
+          <div className='max-w-7xl m-auto flex flex-wrap gap-5 front'>
+            <div className='w-40 h-40 border-solid border-8 border-indigo-400 rounded-full relative  bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)}>
               <div className='absolute top-14 left-8 font-omyu text-xl' >Front-End</div>
             </div>
             {
-              showFrontEnd && frontEnd.map((e, i) => {
+               showFrontEnd && frontEnd.slice(0, currentFrontEndIndex).map((e, i) => {
                 return (
                   <div className="relative group overflow-hidden">
                     <img className='w-40 h-40 ' src={e.img}/>
@@ -110,12 +158,13 @@ function Skill() {
               })
             }
           </div>
-          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10'>
+          
+          <div className='max-w-7xl m-auto flex flex-wrap gap-5 mt-10'>
             <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
               <div className='absolute top-14 left-8 font-omyu text-xl'>Back-End</div>
             </div>
             {
-              showBackEnd && backEnd.map((e, i) => {
+              showBackEnd && backEnd.slice(0, currentBackEndIndex).map((e, i) => {
                 return (
                   <>
                     <div className='relative group overflow-hidden'>
@@ -127,12 +176,12 @@ function Skill() {
               })
             }
           </div>
-          <div className='max-w-7xl m-auto flex items-center flex-wrap justify-between max-lg:flex-col mt-10 pb-28'>
+          <div className='max-w-7xl m-auto flex flex-wrap gap-5 mt-10 pb-28'>
             <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
               <div className='absolute top-14 left-12 font-omyu text-xl'>Tools</div>
             </div>
             {
-              showTools && tools.map((e, i) => {
+              showTools && tools.slice(0, currentToolsIndex).map((e, i) => {
                 return (
                   <>
                     <div className='relative group overflow-hidden'>

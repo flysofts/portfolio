@@ -76,10 +76,10 @@ function Work() {
                 <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>Work</div>
               </div>
             </div>
-            <div className='flex justify-center items-center py-20 font-bold text-3xl h-2'>
-              <div className='cursor-pointer mr-24 font-omyu hover:text-red-400 border-4 px-6'onClick={() => {setFilter(""); activeFilter(""); }}>ALL</div>
-              <div className='cursor-pointer mr-24 font-omyu hover:text-red-400 border-4 px-6' onClick={() => {setFilter("webapp"); activeFilter("webapp"); }}>PROJECT</div>
-              <div className='cursor-pointer font-omyu hover:text-red-400 border-4 px-6' onClick={() => {setFilter("clone"); activeFilter("clone"); }}>CLONE</div>
+            <div className='flex justify-center items-center py-20 font-bold text-3xl h-2 gap-14'>
+              <div className='cursor-pointer  font-omyu bg-purple-300 hover:text-red-200 border-2 dark:text-white text-gray-500 px-6'onClick={() => {setFilter(""); activeFilter(""); }}>ALL</div>
+              <div className='cursor-pointer  bg-purple-300 text-gray-500 font-omyu dark:text-white hover:text-red-200 border-2 px-6' onClick={() => {setFilter("webapp"); activeFilter("webapp"); }}>PROJECT</div>
+              <div className='cursor-pointer font-omyu bg-purple-300 text-gray-500 dark:text-white hover:text-red-200 border-2 px-6' onClick={() => {setFilter("clone"); activeFilter("clone"); }}>CLONE</div>
             </div>
             <ul className='flex flex-wrap m-auto md:justify-center gap-6 lg:justify-start'>
               {
@@ -88,7 +88,7 @@ function Work() {
                     <>
                       <li key={i} className='lg:basis-[32%] md:basis-[40%] basis-full cursor-pointer group border shadow-md'>
                           <img className='w-full h-72'src={e.img}/>
-                          <p className='font-bold pl-6 font-omyu text-xl pt-10'>{e.date}</p> 
+                          <p className='font-bold pl-6 font-omyu text-xl pt-5 '>{e.date}</p> 
                           <p className='font-bold pl-6 font-omyu text-xl'>사용스킬 : {e.skill}</p>
                           <p className='font-bold pl-6 font-omyu text-xl'>{e.desc}</p>      
                       </li>

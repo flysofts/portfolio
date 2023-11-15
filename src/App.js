@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 
 
 
+
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
   <Skill/>
   <Work/>
   <Contact/>
+    
     </div>
   
     
