@@ -106,8 +106,8 @@ function Work() {
                           <img className='w-full h-72'src={e.img} onClick={()=>{link(e.vercel)}}/>
                           <li className='font-bold pl-6 font-omyu text-xl mt-5 mb-2'>{e.date}</li> 
                           <li className='font-bold pl-6 font-omyu text-xl mb-2'>사용스킬 : {e.skill}</li>
-                          <li className='font-bold pl-6 font-omyu text-xl mb-5 '>{e.desc}
-                          <FontAwesomeIcon icon={faGithub} onClick={()=>{link(e.github)}} className='text-xl ml-60 cursor-pointer mx-4   dark:text-white'/>
+                          <li className='font-bold pl-6 font-omyu text-xl mb-5 relative'>{e.desc}
+                          <FontAwesomeIcon icon={faGithub} onClick={()=>{link(e.github)}} className='text-xl absolute top-0 right-5 cursor-pointer  dark:text-white'/>
                          
                           </li>      
                       </li>

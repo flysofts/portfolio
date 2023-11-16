@@ -53,7 +53,7 @@ function Contact() {
                 {
                   btnActive &&
                   <>
-                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-12 w-6 h-6 px-3 py-3 rounded-full border-2 cursor-pointer dark:border-0 bg-white dark:bg-white dark:text-black'/></div>
+                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-20 w-6 h-6 px-3 py-3 rounded-full border-2 cursor-pointer dark:border-0 bg-white dark:bg-white dark:text-black'/></div>
                   </>
                 }
               </div>
