@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
 
 
 function Work() {
@@ -18,6 +19,7 @@ function Work() {
       "date" : "소요기간 : 7일",
       "skill" : "html , css , javascript",
       "desc" : "기여도 100%",
+      "icon": "faTag",
       "type": "clone",
     },
     {
@@ -26,6 +28,7 @@ function Work() {
       "date" : "소요기간 : 14일",
       "skill" : "html , css , javascript",
       "desc" : "기여도 100%",
+      "icon": "faTag",
       "type": "clone",
     },
     {
@@ -34,6 +37,7 @@ function Work() {
       "date" : "소요기간 : 3일",
       "skill" : "react, tailwind",
       "desc" : "기여도 100%",
+      "icon": "faTag",
       "type": "webapp",
     },
     {
@@ -42,6 +46,7 @@ function Work() {
       "date" : "소요기간 : 7일",
       "skill" : "react, Styled Components",
       "desc" : "기여도 100%",
+      "icon": "faTag",
       "type": "webapp",
     },
     {
@@ -50,6 +55,7 @@ function Work() {
       "date" : "소요기간 : 5일",
       "skill" : "react, typescript, tailwind",
       "desc" : "기여도 100%",
+      "icon": "faTag",
       "type": "webapp",
     },
     
@@ -91,8 +97,9 @@ function Work() {
                           <img className='w-full h-72'src={e.img}/>
                           <li className='font-bold pl-6 font-omyu text-xl pt-5 '>{e.date}</li> 
                           <li className='font-bold pl-6 font-omyu text-xl'>사용스킬 : {e.skill}</li>
-                          <li className='font-bold pl-6 font-omyu text-xl'>{e.desc}
-                          <FontAwesomeIcon icon={faGithub} className='text-xl ml-56 cursor-pointer px-4   dark:text-white'/>
+                          <li className='font-bold pl-6 font-omyu text-xl '>{e.desc}
+                          <FontAwesomeIcon icon={faGithub} className='text-xl  cursor-pointer mx-4   dark:text-white'/>
+                          <FontAwesomeIcon icon={faTag} className='text-xl  cursor-pointer mx-4   dark:text-white'/>
                           </li>      
                       </li>
                     </>
