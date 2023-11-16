@@ -12,7 +12,7 @@ function Work() {
   const darkMode = useSelector(state => state.darkMode);
   const content = [
     {
-      "img": "subway.png",
+      "img": "subway.PNG",
       "title": "CLONE",
       "date" : "소요기간 : 7일",
       "skill" : "html , css , javascript",
@@ -20,7 +20,7 @@ function Work() {
       "type": "clone",
     },
     {
-      "img": "library.png",
+      "img": "library.PNG",
       "title": "CLONE",
       "date" : "소요기간 : 14일",
       "skill" : "html , css , javascript",
@@ -28,7 +28,7 @@ function Work() {
       "type": "clone",
     },
     {
-      "img": "quiz.png",
+      "img": "quiz.PNG",
       "title": "WEB APP",
       "date" : "소요기간 : 3일",
       "skill" : "react, tailwind",
@@ -36,7 +36,7 @@ function Work() {
       "type": "webapp",
     },
     {
-      "img": "festival.png",
+      "img": "festival.PNG",
       "title": "WEB APP",
       "date" : "소요기간 : 7일",
       "skill" : "react, Styled Components",
@@ -44,7 +44,7 @@ function Work() {
       "type": "webapp",
     },
     {
-      "img": "parcel.png",
+      "img": "parcel.PNG",
       "title": "WEB APP",
       "date" : "소요기간 : 5일",
       "skill" : "react, typescript, tailwind",
