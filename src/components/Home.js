@@ -50,8 +50,8 @@ function Home() {
 
   return (
     <div name="HOME">
-      <div className={`xl:max-w-full md:max-w-7xl sm:max-w-3xl  h-screen  ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background3.jpg)",backgroundPosition: "center", backgroundSize: "cover",  backgroundRepeat: "no-repeat" }}>
-        <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed bg-white z-30 pl-5  border-b-2 dark:bg-neutral-800'>
+      <div className={`xl:max-w-full md:max-w-7xl sm:max-w-3xl h-screen  ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background3.jpg)",backgroundPosition: "center", backgroundSize: "cover",  backgroundRepeat: "no-repeat" }}>
+        <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed bg-white z-30 pl-5  border-b-4 border-gray-200 dark:bg-neutral-800'>
           <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>HAWN</Link></li>
           {isMobile ? (
             <>
@@ -61,12 +61,12 @@ function Home() {
                 onClick={() => setIsButton(!isButton)}
               />
               {isButton && (
-                <nav  className='absolute top-14 right-0 cursor-pointer w-full h-52 bg-stone-700 bg-opacity-25 text-black p-5'>
-                  <ul className='flex flex-col items-center gap-5'>
-                    <li><Link to="ABOUT" smooth={true} className='text-white text-xl text-center font-pretty hover:border-b-2 '>ABOUT</Link></li>
-                    <li><Link to="SKILL" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>SKILL</Link></li>
-                    <li><Link to="WORK" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>WORK</Link></li>
-                    <li><Link to="CONTACT" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>CONTACT</Link></li>
+                <nav  className='absolute top-14 right-0 cursor-pointer w-full h-52 border-b-4 border-gray-200 bg-white dark:bg-neutral-800  p-5 '>
+                  <ul className='flex flex-col items-center gap-5 '>
+                    <li><Link to="ABOUT" smooth={true} className=' text-xl text-center font-pretty dark:text-white hover:border-b-2 hover:border-white '>ABOUT</Link></li>
+                    <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>SKILL</Link></li>
+                    <li><Link to="WORK" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>WORK</Link></li>
+                    <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>CONTACT</Link></li>
                   </ul>
                 </nav>
               )}
@@ -87,7 +87,7 @@ function Home() {
             onClick={dark}
           />
         </header>
-        <p className='text-center text-white font-bold text-6xl pt-72 font-pretty max-md:text-5xl'>{mainTitle}</p>
+        <p className='text-center text-white font-bold text-7xl pt-96 font-pretty max-md:text-5xl'>{mainTitle}</p>
       </div>
     </div>
   );

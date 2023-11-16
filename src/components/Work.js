@@ -19,8 +19,11 @@ function Work() {
       "date" : "소요기간 : 7일",
       "skill" : "html , css , javascript",
       "desc" : "기여도 100%",
-      "icon": "faTag",
+      "icon": faTag,
+      "vercel":"https://subway-tawny.vercel.app/",
+      "github":"https://github.com/flysofts/subway",
       "type": "clone",
+      
     },
     {
       "img": "library.PNG",
@@ -28,7 +31,7 @@ function Work() {
       "date" : "소요기간 : 14일",
       "skill" : "html , css , javascript",
       "desc" : "기여도 100%",
-      "icon": "faTag",
+      "icon": faTag,
       "type": "clone",
     },
     {
@@ -37,8 +40,10 @@ function Work() {
       "date" : "소요기간 : 3일",
       "skill" : "react, tailwind",
       "desc" : "기여도 100%",
-      "icon": "faTag",
+      "icon": faTag,
       "type": "webapp",
+      "vercel": "https://quiz-jet-two.vercel.app/",
+      "github": "https://github.com/flysofts/Delivery-inquiry",
     },
     {
       "img": "festival.PNG",
@@ -46,7 +51,7 @@ function Work() {
       "date" : "소요기간 : 7일",
       "skill" : "react, Styled Components",
       "desc" : "기여도 100%",
-      "icon": "faTag",
+      "icon": faTag,
       "type": "webapp",
     },
     {
@@ -55,8 +60,10 @@ function Work() {
       "date" : "소요기간 : 5일",
       "skill" : "react, typescript, tailwind",
       "desc" : "기여도 100%",
-      "icon": "faTag",
+      "icon": faTag,
       "type": "webapp",
+      "vercel": "https://delivery-inquiry.vercel.app/",
+      "github": "https://github.com/flysofts/Delivery-inquiry",
     },
     
   ];
@@ -71,7 +78,9 @@ function Work() {
   const activeFilter = (filter) => {
     setActive(filter);
   }
-
+  const link = (url) => {
+    window.open(url, "_blank", "noopener, noreferrer")
+  }
 
   return (
     <>
@@ -94,12 +103,12 @@ function Work() {
                   return (
                     <>
                       <li key={i} className='lg:basis-[32%] md:basis-[40%] basis-full cursor-pointer group border shadow-md hover:scale-105'>
-                          <img className='w-full h-72'src={e.img}/>
+                          <img className='w-full h-72'src={e.img} onClick={()=>{link(e.vercel)}}/>
                           <li className='font-bold pl-6 font-omyu text-xl pt-5 '>{e.date}</li> 
                           <li className='font-bold pl-6 font-omyu text-xl'>사용스킬 : {e.skill}</li>
                           <li className='font-bold pl-6 font-omyu text-xl '>{e.desc}
-                          <FontAwesomeIcon icon={faGithub} className='text-xl  cursor-pointer mx-4   dark:text-white'/>
-                          <FontAwesomeIcon icon={faTag} className='text-xl  cursor-pointer mx-4   dark:text-white'/>
+                          <FontAwesomeIcon icon={faGithub} onClick={()=>{link(e.github)}} className='text-xl ml-60 cursor-pointer mx-4   dark:text-white'/>
+                         
                           </li>      
                       </li>
                     </>
@@ -108,7 +117,6 @@ function Work() {
               }
             </ul>
           </div>
-
         </div>
       </div>
     </>

@@ -49,11 +49,11 @@ function Contact() {
               </div>
               <p className='text-center font-bold text-xl px-10'>저의 포트폴리오를 봐주셔서 감사합니다.</p>
               <div className='relative'>
-                <div className=' text-center text-xl font-pretty mt-20 text-white bg-black dark:bg-neutral-700'>&copy;2023 PARKJIHAWN. all rights reserved.</div>
+                <div className=' text-center text-xl font-pretty mt-20 py-5 text-white bg-black dark:bg-neutral-700'>&copy;2023 PARKJIHAWN. all rights reserved.</div>
                 {
                   btnActive &&
                   <>
-                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-12 w-6 h-6 px-3 py-3 rounded-full border-2 cursor-pointer dark:border-0 dark:bg-white dark:text-black'/></div>
+                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-12 w-6 h-6 px-3 py-3 rounded-full border-2 cursor-pointer dark:border-0 bg-white dark:bg-white dark:text-black'/></div>
                   </>
                 }
               </div>

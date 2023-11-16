@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faCakeCandles, faIdCard, faSchool, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCakeCandles, faIdCard, faHouseChimney, faSchool } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -29,9 +29,12 @@ function About() {
       "desc": "1996-06-24"
     },
     {
-      "icon": faHouseChimney,
-      "title": "Home",
-      "desc": "대구 달서구"
+      "icon": faSchool,
+      "title": "Study",
+      "desc": "그린컴퓨터 아트학원",
+      "desc2": "react를 활용한",
+      "desc3": "프론트엔드 개발자양성",
+      "desc4": "(SPA 프로젝트 개발) 900H"
     },
   ]
     useEffect(()=>{
@@ -68,12 +71,16 @@ function About() {
             {
               info.map((e,i)=>{
                 return(
-                  <div className='shadow-lg rounded-xl py-5 px-20  mx-20 mb-5 heartbeat dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
+                  <div className='shadow-lg rounded-xl py-5 px-20 mx-20 mb-5 heartbeat max-lg:px-52  dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
                     <div>
                     <FontAwesomeIcon className='absolute top-7 left-4 text-2xl' icon={e.icon} />
                     <div>
                     <p className='text-2xl font-bold pb-3 font-pretty max-sm:text-base font-omyu'>{e.title}</p>
-                    <p className='text-xl  font-pretty max-sm:text-xs font-omyu'>{e.desc}</p>
+                    <p className='text-xl  font-pretty max-sm:text-xs font-omyu'>{e.desc}
+                    <p>{e.desc2}</p>
+                    <p>{e.desc3}</p>
+                    <p>{e.desc4}</p>
+                    </p>
                     </div>
                     </div>
                   </div>
