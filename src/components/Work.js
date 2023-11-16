@@ -104,9 +104,9 @@ function Work() {
                     <>
                       <li key={i} className='lg:basis-[32%] md:basis-[40%] basis-full cursor-pointer group border shadow-md hover:scale-105'>
                           <img className='w-full h-72'src={e.img} onClick={()=>{link(e.vercel)}}/>
-                          <li className='font-bold pl-6 font-omyu text-xl pt-5 '>{e.date}</li> 
-                          <li className='font-bold pl-6 font-omyu text-xl'>사용스킬 : {e.skill}</li>
-                          <li className='font-bold pl-6 font-omyu text-xl '>{e.desc}
+                          <li className='font-bold pl-6 font-omyu text-xl mt-5 mb-2'>{e.date}</li> 
+                          <li className='font-bold pl-6 font-omyu text-xl mb-2'>사용스킬 : {e.skill}</li>
+                          <li className='font-bold pl-6 font-omyu text-xl mb-5 '>{e.desc}
                           <FontAwesomeIcon icon={faGithub} onClick={()=>{link(e.github)}} className='text-xl ml-60 cursor-pointer mx-4   dark:text-white'/>
                          
                           </li>      
