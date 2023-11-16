@@ -38,7 +38,7 @@ function Work() {
     {
       "img": "festival.png",
       "title": "WEB APP",
-      "date" : "소요기간 : 5일",
+      "date" : "소요기간 : 7일",
       "skill" : "react, Styled Components",
       "desc" : "기여도 100%",
       "type": "webapp",
@@ -76,12 +76,12 @@ function Work() {
                 <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>Work</div>
               </div>
             </div>
-            <div className='flex justify-center items-center py-20 font-bold text-3xl h-2 gap-14'>
+            <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-3xl h-2 gap-14'>
               <div className='cursor-pointer  font-omyu bg-purple-300 hover:text-red-200 border-2 dark:text-white text-gray-500 px-6'onClick={() => {setFilter(""); activeFilter(""); }}>ALL</div>
               <div className='cursor-pointer  bg-purple-300 text-gray-500 font-omyu dark:text-white hover:text-red-200 border-2 px-6' onClick={() => {setFilter("webapp"); activeFilter("webapp"); }}>PROJECT</div>
               <div className='cursor-pointer font-omyu bg-purple-300 text-gray-500 dark:text-white hover:text-red-200 border-2 px-6' onClick={() => {setFilter("clone"); activeFilter("clone"); }}>CLONE</div>
             </div>
-            <ul className='flex flex-wrap m-auto md:justify-center gap-6 lg:justify-start'>
+            <ul className='flex flex-wrap m-auto md:justify-center gap-6 xl:justify-start'>
               {
                 filterData.map((e, i) =>{
                   return (
