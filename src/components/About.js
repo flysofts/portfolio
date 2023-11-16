@@ -56,9 +56,13 @@ function About() {
         <div className='text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>About</div>
         <div className='max-w-7xl flex flex-wrap justify-center lg:flex-nowrap m-auto pb-40'>
           <div>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10 font-omyu'>안녕하세요 주니어 프론트 개발자 박지환입니다.</p>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl p2-10 font-omyu in_text text'>중요한건 <span className=' font-bold border-b-4 border-red-300'>꺾이지않는 마음</span> 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 좋아합니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-7 font-omyu'>안녕하세요 주니어 프론트 개발자 박지환입니다.</p>
+            
+            <p className='px-10 sm:text-sm md:text-lg text-center lg:text-3xl font-omyu in_text text'>   저는 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 좋아하고 모든일에 최선을 다합니다.
+            <p className=' font-bold'>중요한건 꺾이지않는 마음 !</p></p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl  font-omyu'></p>
             <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10 font-omyu'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam dolor molestiae odio! Labore deserunt eum ducimus non minus est?</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl font-omyu'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam dolor molestiae odio! Labore deserunt eum ducimus non minus est?</p>
           </div>
           <div>
             {
