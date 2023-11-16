@@ -15,27 +15,27 @@ function Skill() {
   const frontEnd = [
     {
       "img": "html.png",
-      "text": "하이",
+      "text": "text",
     },
     {
       "img": "css.png",
-      "text": "하이",
+      "text": "text",
     },
     {
       "img": "javascript.png",
-      "text": "하이",
+      "text": "text",
     },
     {
       "img": "logo192.png",
-      "text": "하이",
+      "text": "text",
     },
     {
       "img": "nextjs.png",
-      "text": "하이",
+      "text": "text",
     },
     {
       "img": "typescript.png",
-      "text": "하이",
+      "text": "text",
     }
 
   ]
@@ -43,15 +43,15 @@ function Skill() {
   const backEnd = [
     {
       "img": "node.js.svg",
-      "text": "안녕"
+      "text": "text",
     },
     {
       "img": "mongoDB.svg",
-      "text": "안녕"
+      "text": "text",
     },
     {
       "img": "mysql.png",
-      "text": "안녕"
+      "text": "text",
     }
 
   ]
@@ -59,19 +59,19 @@ function Skill() {
   const tools = [
     {
       "img": "github.svg",
-      "text": "안녕"
+      "text": "text",
     },
     {
       "img": "git.png",
-      "text": "안녕"
+      "text": "text",
     },
     {
       "img": "figma.png",
-      "text": "안녕"
+      "text": "text",
     },
     {
       "img": "notion.svg",
-      "text": "안녕"
+      "text": "text",
     }
   ]
 
@@ -150,13 +150,12 @@ function Skill() {
                 return (
                   <div className="relative group overflow-hidden">
                     <img className='w-40 h-40 ' src={e.img}/>
-                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center">{e.text}</p>
+                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto text-lg rounded-xl pt-6 text-center">{e.text}</p>
                   </div>
                 )
               })
             }
           </div>
-          
           <div className='max-w-7xl m-auto flex flex-wrap gap-5 mt-10'>
             <div className='w-40 h-40  border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
               <div className='absolute top-14 left-8 font-omyu text-xl'>Back-End</div>

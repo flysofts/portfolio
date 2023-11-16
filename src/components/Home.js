@@ -50,20 +50,20 @@ function Home() {
 
   return (
     <div name="HOME">
-      <div className={`w-full h-screen ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background.jpg)", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
-        <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed bg-opacity-25 z-30 pl-5 bg-stone-700'>
-          <li><Link to="HOME" smooth={true} className='text-white text-xl font-pretty cursor-pointer hover:border-b-2'>HAWN</Link></li>
+      <div className={`w-full h-screen ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background3.jpg)", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+        <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed  z-30 pl-5 bg-white  border-b-2 dark:bg-neutral-800'>
+          <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 dark:text-white'>HAWN</Link></li>
           {isMobile ? (
             <>
               <FontAwesomeIcon
                  icon={isButton ? faBurger : faBars}
-                className='pr-16 absolute top-4 -right-10 text-2xl text-white'
+                className='pr-16 absolute top-4 -right-10 text-2xl text-black dark:text-white'
                 onClick={() => setIsButton(!isButton)}
               />
               {isButton && (
                 <nav  className='absolute top-14 right-0 cursor-pointer w-full h-52 bg-stone-700 bg-opacity-25 text-black p-5'>
                   <ul className='flex flex-col items-center gap-5'>
-                    <li><Link to="ABOUT" smooth={true} className='text-white text-xl text-center font-pretty hover:border-b-2'>ABOUT</Link></li>
+                    <li><Link to="ABOUT" smooth={true} className='text-white text-xl text-center font-pretty hover:border-b-2 '>ABOUT</Link></li>
                     <li><Link to="SKILL" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>SKILL</Link></li>
                     <li><Link to="WORK" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>WORK</Link></li>
                     <li><Link to="CONTACT" smooth={true} className='text-white text-xl font-pretty hover:border-b-2 '>CONTACT</Link></li>
@@ -74,16 +74,16 @@ function Home() {
           ) : (
             <nav className='pl-32'>
               <ul className='flex justify-between gap-24 pr-24'>
-                <li><Link to="ABOUT" smooth={true} className='text-white text-xl font-pretty cursor-pointer hover:border-b-2'>ABOUT</Link></li>
-                <li><Link to="SKILL" smooth={true} className='text-white text-xl font-pretty cursor-pointer hover:border-b-2'>SKILL</Link></li>
-                <li><Link to="WORK" smooth={true} className='text-white text-xl font-pretty cursor-pointer hover:border-b-2'>WORK</Link></li>
-                <li><Link to="CONTACT" smooth={true} className='text-white text-xl font-pretty cursor-pointer hover:border-b-2'>CONTACT</Link></li>
+                <li><Link to="ABOUT" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>ABOUT</Link></li>
+                <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>SKILL</Link></li>
+                <li><Link to="WORK" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>WORK</Link></li>
+                <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>CONTACT</Link></li>
               </ul>
             </nav>
           )}
           <FontAwesomeIcon
             icon={darkMode ? faSun : faMoon}
-            className={`absolute top-4 right-20 text-2xl cursor-pointer ${darkMode ? 'text-white' : 'text-white'}`}
+            className={`absolute top-4 right-20 text-2xl cursor-pointer ${darkMode ? 'text-white' : 'text-black'}`}
             onClick={dark}
           />
         </header>

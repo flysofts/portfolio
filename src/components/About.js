@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCakeCandles, faIdCard, faSchool, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 
@@ -8,8 +8,9 @@ import { useSelector } from 'react-redux'
 function About() {
 
   const darkMode = useSelector(state => state.darkMode);
+  const [isView, setIsView] = useState(false);
+  const [showText, setShowText] = useState(false);
   
-
   const info = [
     {
       "icon": faIdCard,
@@ -32,8 +33,22 @@ function About() {
       "title": "Home",
       "desc": "대구 달서구"
     },
-    
-  ] 
+  ]
+    useEffect(()=>{
+      const scrollEvent = ()=>{
+          const rect = document.querySelector(".text").getBoundingClientRect();        
+          if (rect.top <= window.innerHeight && rect.bottom >= 0){
+             setIsView(true);
+             setShowText(true); 
+          }
+      }
+      window.addEventListener("scroll", scrollEvent)
+      scrollEvent();
+      return () => {
+          window.removeEventListener("scroll", scrollEvent)
+      };
+  }, []);
+
 
   return (
     <div name="ABOUT" className={`w-full ${darkMode ? 'dark' : ''}`}>
@@ -41,10 +56,11 @@ function About() {
         <div className='text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>About</div>
         <div className='max-w-7xl flex flex-wrap justify-center lg:flex-nowrap m-auto pb-40'>
           <div>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl pt-20 font-omyu '>중요한건 <span className=' font-bold border-b-4 border-red-300'>꺾이지않는 마음</span> 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 좋아합니다.</p>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-20 font-omyu'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, numquam.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10 font-omyu'>안녕하세요 주니어 프론트 개발자 박지환입니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl p2-10 font-omyu in_text text'>중요한건 <span className=' font-bold border-b-4 border-red-300'>꺾이지않는 마음</span> 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 좋아합니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10 font-omyu'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam dolor molestiae odio! Labore deserunt eum ducimus non minus est?</p>
           </div>
-          <div className=''>
+          <div>
             {
               info.map((e,i)=>{
                 return(
