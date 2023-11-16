@@ -52,7 +52,7 @@ function Home() {
     <div name="HOME">
       <div className={`w-full h-screen ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background3.jpg)", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
         <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed  z-30 pl-5 bg-white  border-b-2 dark:bg-neutral-800'>
-          <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>HAWN</Link></li>
+          <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white dark:border-white'>HAWN</Link></li>
           {isMobile ? (
             <>
               <FontAwesomeIcon
@@ -74,10 +74,10 @@ function Home() {
           ) : (
             <nav className='pl-32'>
               <ul className='flex justify-between gap-24 pr-24'>
-                <li><Link to="ABOUT" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>ABOUT</Link></li>
-                <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>SKILL</Link></li>
-                <li><Link to="WORK" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>WORK</Link></li>
-                <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white'>CONTACT</Link></li>
+                <li><Link to="ABOUT" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white dark:border-white'>ABOUT</Link></li>
+                <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white dark:border-white'>SKILL</Link></li>
+                <li><Link to="WORK" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white dark:border-white'>WORK</Link></li>
+                <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-red-300 dark:text-white dark:border-white'>CONTACT</Link></li>
               </ul>
             </nav>
           )}
