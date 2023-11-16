@@ -57,7 +57,7 @@ function Home() {
             <>
               <FontAwesomeIcon
                  icon={isButton ? faBurger : faBars}
-                className='pr-16 absolute top-4 -right-10 text-2xl text-black dark:text-white'
+                className='pr-16 absolute top-4 -right-10 text-2xl text-black dark:text-white cursor-pointer'
                 onClick={() => setIsButton(!isButton)}
               />
               {isButton && (
