@@ -61,7 +61,7 @@ function About() {
           <div>
             <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-7 font-omyu'>안녕하세요 주니어 프론트 개발자 박지환입니다.</p>
             
-            <p className='px-10 sm:text-sm md:text-lg text-center lg:text-3xl font-omyu in_text text'>   저는 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 좋아하고 모든일에 최선을 다합니다.
+            <p className='px-10 sm:text-sm md:text-lg text-center lg:text-3xl font-omyu in_text text'>   저는 새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때 성취감을 느끼고 모든일에 최선을 다합니다.
             <p className=' font-bold'>중요한건 꺾이지않는 마음 !</p></p>
             <p className='sm:text-sm md:text-lg text-center lg:text-3xl  font-omyu'></p>
             <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10 font-omyu'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam dolor molestiae odio! Labore deserunt eum ducimus non minus est?</p>
@@ -71,7 +71,7 @@ function About() {
             {
               info.map((e,i)=>{
                 return(
-                  <div className=' shadow-lg rounded-xl py-5 lg:px-20 lg:mx-20  mb-5 heartbeat  md:px-56 sm:px-44 max-sm:px-48 dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
+                  <div className=' shadow-lg rounded-xl py-5 lg:px-20 lg:mx-20  mb-5 heartbeat  md:px-56 sm:px-44 max-sm:px-40 dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
                     <div>
                     <FontAwesomeIcon className='absolute top-7 left-4 text-2xl' icon={e.icon} />
                     <div>

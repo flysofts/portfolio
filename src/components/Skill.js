@@ -81,7 +81,7 @@ function Skill() {
     if(showFrontEnd && currentFrontEndIndex < frontEnd.length) {
       const timeoutId = setTimeout(() => {
         setCurrentFrontEndIndex(currentFrontEndIndex + 1);
-      }, 300);
+      }, 500);
       return () => clearTimeout(timeoutId);
     }
   }, [showFrontEnd, currentFrontEndIndex]);
@@ -96,7 +96,7 @@ function Skill() {
     if(showBackEnd && currentBackEndIndex < backEnd.length) {
       const timeoutId = setTimeout(() => {
         setCurrentBackEndIndex(currentBackEndIndex + 1);
-      }, 300);
+      }, 500);
       return () => clearTimeout(timeoutId);
     }
   }, [showBackEnd, currentBackEndIndex]);
@@ -111,7 +111,7 @@ function Skill() {
     if(showTools && currentToolsIndex < tools.length) {
       const timeoutId = setTimeout(() => {
         setCurrentToolsIndex(currentToolsIndex + 1);
-      }, 300);
+      }, 500);
       return () => clearTimeout(timeoutId);
     }
   }, [showTools, currentToolsIndex]);
@@ -176,7 +176,7 @@ useEffect(()=>{
           <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
 
 
-          <div className='max-w-7xl m-auto  max-xl:flex max-xl:max-w-2xl '>
+          <div className='max-w-7xl m-auto  max-xl:flex max-xl:max-w-2xl  '>
           <div className=' m-auto flex max-xl:flex-col  mt-10 front'>
             <div className='w-40 h-40 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)}>
               <div className='absolute top-14 left-8 font-omyu text-xl' >Front-End</div>

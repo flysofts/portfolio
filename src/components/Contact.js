@@ -47,7 +47,7 @@ function Contact() {
                   <FontAwesomeIcon icon={faComments} className='text-4xl dark:text-white' />
                 </a>
               </div>
-              <p className='text-center font-bold text-xl px-10'>저의 포트폴리오를 봐주셔서 감사합니다.</p>
+              <p className='text-center font-bold text-xl px-10'>Thank you for visiting my portfolio</p>
               <div className='relative'>
                 <div className=' text-center text-xl font-pretty mt-20 py-5 text-white bg-black dark:bg-neutral-700'>&copy;2023 PARKJIHAWN. all rights reserved.</div>
                 {
