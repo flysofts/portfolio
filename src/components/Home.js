@@ -64,7 +64,7 @@ function Home() {
                 <nav  className='absolute top-14 right-0 cursor-pointer w-full h-52 border-b-4 border-gray-200 bg-white dark:bg-neutral-800  p-5 '>
                   <ul className='flex flex-col items-center gap-5 '>
                     <li><Link to="ABOUT" smooth={true} className=' text-xl text-center font-pretty dark:text-white hover:border-b-2 hover:border-white '>ABOUT</Link></li>
-                    <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>SKILL</Link></li>
+                    <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>SKILLS</Link></li>
                     <li><Link to="WORK" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>WORK</Link></li>
                     <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty dark:text-white  hover:border-b-2 hover:border-white'>CONTACT</Link></li>
                   </ul>
@@ -75,7 +75,7 @@ function Home() {
             <nav className='pl-32'>
               <ul className='flex justify-between gap-24 pr-24'>
                 <li><Link to="ABOUT" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>ABOUT</Link></li>
-                <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>SKILL</Link></li>
+                <li><Link to="SKILL" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>SKILLS</Link></li>
                 <li><Link to="WORK" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>WORK</Link></li>
                 <li><Link to="CONTACT" smooth={true} className=' text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>CONTACT</Link></li>
               </ul>
