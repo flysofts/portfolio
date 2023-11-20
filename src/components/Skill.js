@@ -176,50 +176,50 @@ useEffect(()=>{
           <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
 
 
-          <div className='max-w-7xl m-auto  max-xl:flex max-xl:max-w-2xl  '>
+          <div className='max-w-7xl m-auto  max-xl:flex max-xl:max-w-2xl'>
           <div className=' m-auto flex max-xl:flex-col  mt-10 front'>
-            <div className='w-40 h-40 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)}>
-              <div className='absolute top-14 left-8 font-omyu text-xl' >Front-End</div>
+            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)}>
+              <div className='absolute top-10 left-6 font-omyu text-lg' >Front-End</div>
             </div>
             {
                showFrontEnd && frontEnd.slice(0, currentFrontEndIndex).map((e, i) => {
                 return (
                   <div className="relative group overflow-hidden">
-                    <img className='w-40 h-40' src={e.img}/>
-                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto text-lg rounded-xl pt-6 text-center">{e.text}</p>
+                    <img className='w-32 h-32' src={e.img}/>
+                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto text-lg rounded-xl pt-6 text-center">{e.text}</p>
                   </div>
                 )
               })
             }
           </div>
           <div className=' m-auto flex max-xl:flex-col mt-10 backend'>
-            <div className='w-40 h-40 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
-              <div className='absolute top-14 left-8 font-omyu text-xl '>Back-End</div>
+            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
+              <div className='absolute top-10 left-6 font-omyu text-lg '>Back-End</div>
             </div>
             {
               showBackEnd && backEnd.slice(0, currentBackEndIndex).map((e, i) => {
                 return (
                   <>
                     <div className='relative group overflow-hidden'>
-                      <img className='w-40 h-40' src={e.img}  />
-                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center ">{e.text}</p>
+                      <img className='w-32 h-32' src={e.img}  />
+                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto rounded-xl pt-6 text-center ">{e.text}</p>
                     </div>
                   </>
                 )
               })
             }
           </div>
-          <div className=' m-auto flex max-xl:flex-col tools gap-5 mt-10 pb-28'>
-            <div className='w-40 h-40 mb-10 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
-              <div className='absolute top-14 left-12 font-omyu text-xl'>Tools</div>
+          <div className=' m-auto flex max-xl:flex-col tools mt-10 pb-28'>
+            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
+              <div className='absolute top-10 left-9 font-omyu text-lg'>Tools</div>
             </div>
             {
               showTools && tools.slice(0, currentToolsIndex).map((e, i) => {
                 return (
                   <>
                     <div className='relative group overflow-hidden'>
-                      <img className='w-40 h-40' src={e.img} ></img>
-                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-40 h-40 m-auto rounded-xl pt-6 text-center">{e.text}</p>
+                      <img className='w-32 h-32' src={e.img} ></img>
+                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto rounded-xl pt-6 text-center">{e.text}</p>
                     </div>
                   </>
                 )
