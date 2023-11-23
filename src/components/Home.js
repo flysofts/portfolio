@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun, faBars, faBurger } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-scroll';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { DarkMode } from '../redux/actions';
 
@@ -21,17 +20,6 @@ function Home() {
   const [isButton, setIsButton] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 892);
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 892);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, []);
 
   useEffect(() => {
     if (count < Title.length) {
@@ -47,6 +35,20 @@ function Home() {
       };
     }
   }, [count]);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 892);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  
 
   return (
     <div name="HOME">

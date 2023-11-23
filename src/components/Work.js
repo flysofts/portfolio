@@ -53,6 +53,8 @@ function Work() {
       "desc": "기여도 100%",
       "icon": faTag,
       "type": "webapp",
+      "vercel": "https://festival-hazel.vercel.app/",
+      "github": "https://github.com/flysofts/festival",
     },
     {
       "img": "parcel.PNG",
@@ -65,6 +67,17 @@ function Work() {
       "vercel": "https://delivery-inquiry.vercel.app/",
       "github": "https://github.com/flysofts/Delivery-inquiry",
     },
+    {
+      "img": "lucky.PNG",
+      "title": "WEB APP",
+      "date": "소요기간 : 3일",
+      "skill": "nextjs, typescript, tailwind",
+      "desc": "기여도 100%",
+      "icon": faTag,
+      "type": "webapp",
+      "vercel": "https://lucky-delta-two.vercel.app/",
+      "github": "https://github.com/flysofts/lucky",
+    },
 
   ];
 
@@ -74,14 +87,7 @@ function Work() {
     return item.type === filter;
   })
 
-  const [active, setActive] = useState('');
-  const activeFilter = (filter) => {
-    setActive(filter);
-  }
 
-  const link = (url) => {
-    window.open(url, "_blank", "noopener, noreferrer")
-  }
   const contentCount = (type) => {
     return content.filter((item) => item.type === type).length;
   };
@@ -89,7 +95,7 @@ function Work() {
 
   const [activeButton, setActiveButton] = useState('');
 
-  const handleClickButton = (filter) => {
+  const Button = (filter) => {
     setFilter(filter);
     setActiveButton(filter);
   };
@@ -98,6 +104,10 @@ function Work() {
     return `cursor-pointer font-omyu bg-purple-300 border-2 dark:text-white px-6 py-1  ${activeButton === text ? 'bg-red-100' : 'text-gray-500'}`;
   };
 
+
+  const link = (url) => {
+    window.open(url, "_blank", "noopener, noreferrer")
+  }
   return (
     <>
       <div name="WORK" className={`${darkMode ? 'dark' : ''}`}>
@@ -109,9 +119,9 @@ function Work() {
               </div>
             </div>
             <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-3xl max-sm:text-xl gap-5 '>
-        <div className={category('')} onClick={() => handleClickButton('')}>ALL ({content.length})</div>
-        <div className={category('webapp')} onClick={() => handleClickButton('webapp')}>PROJECT ({contentCount('webapp')})</div>
-        <div className={category('clone')} onClick={() => handleClickButton('clone')}>CLONE ({contentCount('clone')})</div>
+        <div className={category('')} onClick={() => Button('')}>ALL ({content.length})</div>
+        <div className={category('webapp')} onClick={() => Button('webapp')}>PROJECT ({contentCount('webapp')})</div>
+        <div className={category('clone')} onClick={() => Button('clone')}>CLONE ({contentCount('clone')})</div>
       </div>
             <ul className='flex flex-wrap md:justify-center basis-full gap-6 xl:justify-start'>
               {
@@ -123,7 +133,7 @@ function Work() {
                         <li className='font-bold pl-6 font-omyu text-xl mt-5 mb-2'>{e.date}</li>
                         <li className='font-bold pl-6 font-omyu text-xl mb-2'>사용스킬 : {e.skill}</li>
                         <li className='font-bold pl-6 font-omyu text-xl mb-5 relative'>{e.desc}
-                          <FontAwesomeIcon icon={faGithub} onClick={() => { link(e.github) }} className='text-3xl absolute top-0 right-5 cursor-pointer  dark:text-white' />
+                          <FontAwesomeIcon icon={faGithub} onClick={() => { link(e.github) }} className='text-3xl absolute top-0 right-5 cursor-pointer  dark:text-white'/>
                         </li>
                       </li>
                     </>

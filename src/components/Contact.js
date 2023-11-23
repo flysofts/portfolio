@@ -9,9 +9,10 @@ import { useSelector } from 'react-redux'
 function Contact() {
 
   const darkMode = useSelector(state => state.darkMode);
+  
   const [btnActive, setBtnActive] = useState(false);
   const Topscroll = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({top: 0, behavior: "smooth"});
   }
   useEffect(() => {
     const Button = () => {

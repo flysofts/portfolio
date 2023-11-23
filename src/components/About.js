@@ -74,7 +74,7 @@ function About() {
                   <div className=' shadow-lg rounded-xl py-5 lg:px-20 lg:mx-20  mb-5 heartbeat  md:px-56 sm:px-44 max-sm:px-32 dark:shadow-black dark:bg-white dark:text-black ' style={{animationDelay: `${i * 0.1}s`}}>
                     <div>
                     <FontAwesomeIcon className='absolute top-7 left-4 text-2xl' icon={e.icon} />
-                    <div>
+                    <div> 
                     <p className='text-2xl font-bold pb-3 font-pretty max-sm:text-base font-omyu'>{e.title}</p>
                     <p className='text-xl font-pretty max-sm:text-xs font-omyu'>{e.desc}
                     <p>{e.desc2}</p>
