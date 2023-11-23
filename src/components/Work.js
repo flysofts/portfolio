@@ -78,6 +78,16 @@ function Work() {
       "vercel": "https://lucky-delta-two.vercel.app/",
       "github": "https://github.com/flysofts/lucky",
     },
+    {
+      "img": "sql.PNG",
+      "title": "WEB APP",
+      "date": "소요기간 : 21일",
+      "skill": "mysql, typescript, tailwind",
+      "desc": "기여도 100%",
+      "icon": faTag,
+      "type": "webapp",
+      "github": "https://github.com/flysofts/mysql",
+    },
 
   ];
 
