@@ -42,8 +42,8 @@ function Work() {
       "desc": "기여도 100%",
       "icon": faTag,
       "type": "webapp",
-      "vercel": "https://quiz-jet-two.vercel.app/",
-      "github": "https://github.com/flysofts/Delivery-inquiry",
+      "vercel": "https://quiz-alpha-eight.vercel.app/",
+      "github": "https://github.com/flysofts/quiz",
     },
     {
       "img": "festival.PNG",
@@ -53,7 +53,7 @@ function Work() {
       "desc": "기여도 100%",
       "icon": faTag,
       "type": "webapp",
-      "vercel": "https://festival-hazel.vercel.app/",
+      "vercel": "https://festival-alpha.vercel.app/",
       "github": "https://github.com/flysofts/festival",
     },
     {
