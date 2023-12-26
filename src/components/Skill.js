@@ -173,13 +173,13 @@ useEffect(()=>{
     <>
       <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600  '>        
-          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
+          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
 
 
           <div className='max-w-7xl m-auto max-xl:flex max-xl:max-w-2xl'>
           <div className=' m-auto flex max-xl:flex-col mt-10 front'>
             <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setShowFrontEnd(!showFrontEnd)}>
-              <div className='absolute top-10 left-6 font-omyu text-lg' >Front-End</div>
+              <div className='absolute top-10 left-6 text-lg' >Front-End</div>
             </div>
             {
                showFrontEnd && frontEnd.slice(0, currentFrontEndIndex).map((e, i) => {
@@ -194,7 +194,7 @@ useEffect(()=>{
           </div>
           <div className=' m-auto flex max-xl:flex-col mt-10 backend'>
             <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer' onClick={() => setshowBackEnd(!showBackEnd)}>
-              <div className='absolute top-10 left-6 font-omyu text-lg '>Back-End</div>
+              <div className='absolute top-10 left-6 text-lg '>Back-End</div>
             </div>
             {
               showBackEnd && backEnd.slice(0, currentBackEndIndex).map((e, i) => {
@@ -211,7 +211,7 @@ useEffect(()=>{
           </div>
           <div className=' m-auto flex max-xl:flex-col tools mt-10 pb-28'>
             <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' onClick={() => setshowTools(!showTools)}>
-              <div className='absolute top-10 left-9 font-omyu text-lg'>Tools</div>
+              <div className='absolute top-10 left-9 text-lg'>Tools</div>
             </div>
             {
               showTools && tools.slice(0, currentToolsIndex).map((e, i) => {

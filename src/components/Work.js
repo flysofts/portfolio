@@ -26,6 +26,16 @@ function Work() {
 
     },
     {
+      "img": "kakaotalk.PNG",
+      "title": "CLONE",
+      "date": "소요기간 : 2일",
+      "skill": "html , css",
+      "desc": "기여도 100%",
+      "icon": faTag,
+      "type": "webapp",
+      "github": "https://github.com/flysofts/flysofts.github.io",
+    },
+    {
       "img": "library.PNG",
       "title": "CLONE",
       "date": "소요기간 : 14일",
@@ -88,7 +98,7 @@ function Work() {
       "type": "webapp",
       "github": "https://github.com/flysofts/mysql",
     },
-
+    
   ];
 
   const [filter, setFilter] = useState('');
