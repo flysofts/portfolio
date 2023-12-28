@@ -54,7 +54,7 @@ function Home() {
     <div name="HOME">
       <div className={`xl:max-w-full md:max-w-7xl sm:max-w-3xl h-screen  ${darkMode ? 'dark' : ''}`} style={{ backgroundImage: "url(/background3.jpg)",backgroundPosition: "center", backgroundSize: "cover",  backgroundRepeat: "no-repeat" }}>
         <header className='w-full flex justify-between items-center pt-4 pb-4 pr-24 fixed bg-white z-30 pl-5  border-b-2 border-gray-200 dark:bg-neutral-800 dark:border-0'>
-          <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>HAWN</Link></li>
+          <li><Link to="HOME" smooth={true} className='text-xl font-pretty cursor-pointer hover:border-b-2 hover:border-black dark:text-white dark:border-white'>HWAN</Link></li>
           {isMobile ? (
             <>
               <FontAwesomeIcon

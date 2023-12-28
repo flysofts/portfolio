@@ -32,7 +32,7 @@ function Work() {
       "skill": "html , css",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "clone",
       "github": "https://github.com/flysofts/flysofts.github.io",
     },
     {
