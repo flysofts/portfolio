@@ -50,7 +50,7 @@ function Contact() {
               </div>
               <p className='text-center font-bold text-xl px-10'>Thank you for visiting my portfolio</p>
               <div className='relative'>
-                <div className=' text-center text-xl mt-20 py-5 text-white bg-black dark:bg-neutral-700'>&copy;2023 PARKJIHWAN. all rights reserved.</div>
+                <div className=' text-center text-xl mt-20 py-5 text-white bg-black dark:bg-neutral-700'>&copy;2024 PARKJIHWAN. all rights reserved.</div>
                 {
                   btnActive &&
                   <>
