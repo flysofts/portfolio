@@ -38,23 +38,25 @@ function About() {
   return (
     <div name="ABOUT" className={`w-full ${darkMode ? 'dark' : ''}`}>
       <div className='dark:bg-neutral-600 dark:text-white'>
-        <div className='text-center w-24 text-4xl lg:text-6xl lg:w-48 m-auto pt-32 font-bold border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>About</div>
-        <div className='w-full flex flex-col lg:flex-row justify-center  m-auto pb-24'>
+        <div className='text-center w-24 text-4xl lg:text-6xl lg:w-48 m-auto pt-32 font-bold text-black dark:text-white'>About</div>
+        <div className='w-full flex flex-col lg:flex-row justify-center m-auto pb-24'>
           <div>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-7 mt-24'>안녕하세요<span className='text-lg lg:text-2xl mx-2'>🖐</span> 저는 주니어 프론트 개발자 박지환입니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl mt-48'>안녕하세요<span className='text-lg lg:text-2xl mx-2'>🖐</span> 저는 주니어 프론트 개발자 박지환입니다.</p>
             <p className='px-10 sm:text-sm md:text-lg text-center py-5 lg:text-3xl'>새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때
-              <p>성취감을 느끼고 모든일에 최선을 다합니다.</p>
-              <p className=' font-bold'>중요한건 꺾이지않는 마음 !</p></p>
+              <p>성취감과 재미를 느끼고 있습니다.</p>
+              </p>
             <p className='sm:text-sm md:text-lg text-center lg:text-3xl'></p>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10'>모든일에 두려움을 가지기보단 재미를 찾고 있습니다.
-              <p>지속적인 학습으로 앞으로의 프론트 개발자의 길을 걷겠습니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl py-10'>어떠한 일이든 새로움에 두려움을 가지기보단 재미를 찾고 있습니다.
+              <p className='py-2'>앞으로도 지속적인 학습으로 <span className='font-bold'>프론트 개발자</span>의 길을 걷겠습니다.</p>
+              <p className=' font-bold'>중요한건 꺾이지않는 마음 !</p>
             </p>
+            
             </div>
             <div>
             {
               info.map((e, i) => {
                 return (
-                  <div className='w-96 mx-auto shadow-lg rounded-xl flex py-8 mb-5 heartbeat  dark:shadow-black dark:bg-white dark:text-black ' style={{ animationDelay: `${i * 0.1}s` }}>
+                  <div className='w-80 mx-auto shadow-lg rounded-xl flex py-8 mb-5 heartbeat  dark:shadow-black dark:bg-white dark:text-black ' style={{ animationDelay: `${i * 0.1}s` }}>
                       <FontAwesomeIcon className='text-2xl p-4' icon={e.icon} />
                       <div>
                         <p className='text-lg font-bold p-3'>{e.title}</p>

@@ -1,8 +1,6 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useState } from 'react'
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -51,7 +49,7 @@ function Work() {
       "skill": "react, tailwind",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "project",
       "vercel": "https://quiz-alpha-eight.vercel.app/",
       "github": "https://github.com/flysofts/quiz",
     },
@@ -62,7 +60,7 @@ function Work() {
       "skill": "react, Styled Components",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "project",
       "vercel": "https://festival-alpha.vercel.app/",
       "github": "https://github.com/flysofts/festival",
     },
@@ -73,7 +71,7 @@ function Work() {
       "skill": "react, typescript, tailwind",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "project",
       "vercel": "https://delivery-inquiry.vercel.app/",
       "github": "https://github.com/flysofts/Delivery-inquiry",
     },
@@ -84,7 +82,7 @@ function Work() {
       "skill": "nextjs, typescript, tailwind",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "project",
       "vercel": "https://lucky-delta-two.vercel.app/",
       "github": "https://github.com/flysofts/lucky",
     },
@@ -95,7 +93,7 @@ function Work() {
       "skill": "mysql, typescript, tailwind",
       "desc": "기여도 100%",
       "icon": faTag,
-      "type": "webapp",
+      "type": "project",
       "github": "https://github.com/flysofts/mysql",
     },
     
@@ -121,7 +119,7 @@ function Work() {
   };
 
   const category = (text) => {
-    return `cursor-pointer font-omyu bg-purple-300 border-2 dark:text-white px-6 py-1  ${activeButton === text ? 'bg-red-100' : 'text-gray-500'}`;
+    return `cursor-pointer border-2 dark:text-black px-6 py-2 duration-500 ${activeButton === text ? 'bg-sky-300' : 'bg-white hover:bg-sky-300'}`;
   };
 
 
@@ -132,27 +130,27 @@ function Work() {
     <>
       <div name="WORK" className={`${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600 dark:text-white'>
-          <div className='max-w-7xl m-auto relative lg:pt-0 md:pt-0 pt-20 '>
+          <div className='max-w-7xl m-auto relative lg:pt-0 md:pt-0 pt-20'>
             <div className='flex justify-center'>
               <div className='text-center'>
-                <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold font-omyu border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50'>Work</div>
+                <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold text-black dark:text-white'>Work</div>
               </div>
             </div>
-            <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-3xl max-sm:text-xl gap-5 '>
+            <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-xl md:text-3xl gap-5 '>
         <div className={category('')} onClick={() => Button('')}>ALL ({content.length})</div>
-        <div className={category('webapp')} onClick={() => Button('webapp')}>PROJECT ({contentCount('webapp')})</div>
+        <div className={category('project')} onClick={() => Button('project')}>PROJECT ({contentCount('project')})</div>
         <div className={category('clone')} onClick={() => Button('clone')}>CLONE ({contentCount('clone')})</div>
       </div>
-            <ul className='flex flex-wrap md:justify-center basis-full gap-6 xl:justify-start'>
+            <ul className='flex flex-wrap md:justify-center gap-6 xl:justify-start'>
               {
                 filterData.map((e, i) => {
                   return (
                     <>
-                      <li key={i} className='max-sm:m-auto lg:basis-[32%] md:basis-[40%]  basis-11/12 group border shadow-md hover:scale-105'>
+                      <li key={i} className='mx-auto md:mx-0 lg:basis-[32%] md:basis-[40%]  basis-11/12 group border shadow-md hover:scale-[102%]'>
                         <img className='w-full h-72 cursor-pointer ' src={e.img} onClick={() => { link(e.vercel) }} />
-                        <li className='font-bold pl-6 font-omyu text-xl mt-5 mb-2'>{e.date}</li>
-                        <li className='font-bold pl-6 font-omyu text-xl mb-2'>사용스킬 : {e.skill}</li>
-                        <li className='font-bold pl-6 font-omyu text-xl mb-5 relative'>{e.desc}
+                        <li className='font-bold pl-6 text-xl mt-5 mb-2'>{e.date}</li>
+                        <li className='font-bold pl-6 text-xl mb-2'>사용스킬 : {e.skill}</li>
+                        <li className='font-bold pl-6 text-xl mb-5 relative'>{e.desc}
                           <FontAwesomeIcon icon={faGithub} onClick={() => { link(e.github) }} className='text-3xl absolute top-0 right-5 cursor-pointer  dark:text-white'/>
                         </li>
                       </li>

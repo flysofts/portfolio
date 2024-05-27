@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react';
 import { useSelector } from 'react-redux'
 
 
@@ -6,8 +6,8 @@ function Skill() {
   const darkMode = useSelector(state => state.darkMode);
   
 
-  
-  const frontEnd = [
+
+  const skills = [
     {
       "img": "html.png",
       "text": "text",
@@ -35,7 +35,7 @@ function Skill() {
 
   ]
 
-  const backEnd = [
+  const skill = [
     {
       "img": "node.js.svg",
       "text": "text",
@@ -50,6 +50,7 @@ function Skill() {
     }
 
   ]
+
 
   const tools = [
     {
@@ -73,62 +74,47 @@ function Skill() {
   return (
     <>
       <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
-        <div className='dark:bg-neutral-600  '>        
-          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold border-solid border-b-4 border-red-300 text-gray-500 dark:text-white dark:border-red-50">Skills</div>
-
-
-          <div className='max-w-7xl m-auto max-xl:flex max-xl:max-w-2xl'>
-          <div className=' m-auto flex max-xl:flex-col mt-10 front'>
-            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer'> 
-              <div className='absolute top-10 left-6 text-lg' >Front-End</div>
-            </div>
-            {
-               frontEnd.map((e, i) => {
-                return (
-                  <div className="relative group overflow-hidden">
-                    <img className='w-32 h-32' src={e.img}/>
-                    <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto text-lg rounded-xl pt-6 text-center">{e.text}</p>
-                  </div>
-                )
-              })
-            }
-          </div>
-          <div className=' m-auto flex max-xl:flex-col mt-10 backend'>
-            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full  relative bg-white cursor-pointer'>
-              <div className='absolute top-10 left-6 text-lg '>Back-End</div>
-            </div>
-            {
-              backEnd.map((e, i) => {
-                return (
-                  <>
-                    <div className='relative group overflow-hidden'>
-                      <img className='w-32 h-32' src={e.img}  />
-                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto rounded-xl pt-6 text-center ">{e.text}</p>
+        <div className='dark:bg-neutral-600  '>
+          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold  text-black dark:text-white">Skills</div>
+          <div className='max-w-7xl mx-auto flex justify-center items-start gap-12 flex-wrap'>
+            <div className='md:flex gap-12 md:basis-10/12'>
+              {
+                skills.map((e, i) => {
+                  return (
+                    <div className='relative group mb-16'>
+                      <img  className='w-24 h-24 lg:w-28 lg:h-28 ' src={e.img} alt={`Skill ${i}`}/>
+                      <p className="absolute -bottom-14 opacity-0 group-hover:opacity-100 dark:text-white">{e.text}</p>
                     </div>
-                  </>
-                )
-              })
-            }
-          </div>
-          <div className=' m-auto flex max-xl:flex-col tools mt-10 pb-28'>
-            <div className='w-32 h-32 mb-10 border-solid border-8 border-indigo-400 rounded-full relative bg-white cursor-pointer' >
-              <div className='absolute top-10 left-9 text-lg'>Tools</div>
+                  )
+                })
+              }
             </div>
-            {
-              tools.map((e, i) => {
-                return (
-                  <>
-                    <div className='relative group overflow-hidden'>
-                      <img className='w-32 h-32' src={e.img} ></img>
-                      <p className="absolute top-0 -left-full group-hover:left-0 opacity-50 transition-all duration-500 ease-in-out bg-black text-white w-32 h-32 m-auto rounded-xl pt-6 text-center">{e.text}</p>
+            <div className='md:flex gap-12 md:basis-10/12'>
+              
+              {
+                skill.map((e, i) => {
+                  return (
+                    <div className='relative group mb-16'>
+                      <img  className='w-24 h-24 lg:w-28 lg:h-28 ' src={e.img} alt={`Skill ${i}`}/>
+                      <p className="absolute -bottom-8 opacity-0 group-hover:opacity-100 dark:text-white">{e.text}</p>
                     </div>
-                  </>
-                )
-              })
-            }
+                  )
+                })
+              }
+            </div>
+            <div className='md:flex gap-12 md:basis-10/12'>
+              {
+                tools.map((e, i) => {
+                  return (
+                    <div className='relative group mb-16'>
+                    <img className='w-24 h-24 lg:w-28 lg:h-28' src={e.img} alt={`Skill ${i}`}/>
+                    <span className='absolute -bottom-8 opacity-0 group-hover:opacity-100 dark:text-white'>{e.text}</span>
+                    </div>
+                  )
+                })
+              }
+            </div>
           </div>
-
-          </div>  
         </div>
       </div>
     </>
