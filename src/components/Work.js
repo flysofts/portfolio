@@ -133,7 +133,7 @@ function Work() {
           <div className='max-w-7xl m-auto relative lg:pt-0 md:pt-0 pt-20'>
             <div className='flex justify-center'>
               <div className='text-center'>
-                <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold text-black dark:text-white'>Work</div>
+                <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold text-black dark:text-white'>Work ?</div>
               </div>
             </div>
             <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-xl md:text-3xl gap-5 '>

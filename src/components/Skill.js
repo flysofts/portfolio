@@ -75,7 +75,7 @@ function Skill() {
     <>
       <div name="SKILL" className={` ${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600  '>
-          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold  text-black dark:text-white">Skills</div>
+          <div className="text-center w-52 text-6xl  m-auto pt-32 mb-24 font-bold  text-black dark:text-white">Skills ?</div>
           <div className='max-w-7xl mx-auto flex justify-center items-start gap-12 flex-wrap'>
             <div className='md:flex gap-12 md:basis-10/12'>
               {
