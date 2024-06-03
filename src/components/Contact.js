@@ -35,7 +35,7 @@ function Contact() {
       <div name="CONTACT" className={`w-full ${darkMode ? 'dark' : ''}`}>
         <div className='dark:bg-neutral-600 dark:text-white'>
           <div className='pt-24'>
-            <p className='text-center w-96 text-6xl  m-auto mt-32 mb-48 font-bold text-black dark:text-white  '>Contact Me !</p>
+            <p className='text-center text-2xl lg:text-6xl  m-auto mt-32 mb-48 font-bold text-black dark:text-white  '>Contact Me !</p>
             <div>
               <div className='flex justify-center pb-10 gap-10'>
                 <a href='https://github.com/flysofts' target='_blank'>
@@ -54,7 +54,7 @@ function Contact() {
                 {
                   btnActive &&
                   <>
-                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-20 w-6 h-6 px-3 py-3 rounded-full border-2 duration-700 hover:bg-indigo-400 hover:text-white cursor-pointer dark:bg-white dark:text-black dark:hover:bg-indigo-400 bg-white'/></div>
+                    <div onClick={Topscroll}><FontAwesomeIcon icon={faArrowUp} className='fixed right-8 bottom-20 w-6 h-6 px-3 py-3 rounded-full border-2 duration-700 hover:bg-indigo-400 hover:text-white hover:border-indigo-400 cursor-pointer dark:bg-white dark:text-black dark:hover:bg-indigo-400 bg-white'/></div>
                   </>
                 }
               </div>

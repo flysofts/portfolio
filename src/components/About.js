@@ -38,10 +38,10 @@ function About() {
   return (
     <div name="ABOUT" className={`w-full ${darkMode ? 'dark' : ''}`}>
       <div className='dark:bg-neutral-600 dark:text-white'>
-        <div className='text-center w-24 text-4xl lg:text-6xl lg:w-48 m-auto pt-32 font-bold text-black dark:text-white'>About ?</div>
+        <div className='text-center text-2xl lg:text-6xl lg:w-48 m-auto pt-32 font-bold text-black dark:text-white'>About</div>
         <div className='w-full flex flex-col lg:flex-row justify-center m-auto pb-24'>
           <div>
-            <p className='sm:text-sm md:text-lg text-center lg:text-3xl mt-48'>안녕하세요<span className='text-lg lg:text-2xl mx-2'>🖐</span> 저는 주니어 프론트 개발자 박지환입니다.</p>
+            <p className='sm:text-sm md:text-lg text-center lg:text-3xl mt-24'>안녕하세요<span className='text-lg lg:text-2xl mx-2'>🖐</span> 저는 주니어 프론트 개발자 박지환입니다.</p>
             <p className='px-10 sm:text-sm md:text-lg text-center py-5 lg:text-3xl'>새로운 기술을 배우고 문제를 해결하여 원하는 것을 구현하였을때
               <p>성취감과 재미를 느끼고 있습니다.</p>
               </p>
@@ -50,7 +50,6 @@ function About() {
               <p className='py-2'>앞으로도 지속적인 학습으로 성장하는<br /><span className='font-bold'>프론트 개발자</span> 의 길을 걷겠습니다.</p>
               <p className=' font-bold'>중요한건 꺾이지않는 마음 !</p>
             </p>
-            
             </div>
             <div>
             {

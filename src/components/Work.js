@@ -119,7 +119,7 @@ function Work() {
   };
 
   const category = (text) => {
-    return `cursor-pointer border-2 dark:text-black px-6 py-2 duration-500 ${activeButton === text ? 'bg-sky-300' : 'bg-white hover:bg-sky-300'}`;
+    return `cursor-pointer border-2 dark:text-black px-6 py-2 duration-500 ${activeButton === text ? 'bg-sky-300  border-sky-300' : 'bg-white hover:bg-sky-300 hover:border-sky-300'}`;
   };
 
 
@@ -133,7 +133,7 @@ function Work() {
           <div className='max-w-7xl m-auto relative lg:pt-0 md:pt-0 pt-20'>
             <div className='flex justify-center'>
               <div className='text-center'>
-                <div className='text-center  w-52 text-6xl  pt-32 mb-24  font-bold text-black dark:text-white'>Work ?</div>
+                <div className='text-center text-2xl lg:text-6xl  pt-32 mb-24  font-bold text-black dark:text-white'>Work</div>
               </div>
             </div>
             <div className='max-w-7xl flex justify-center items-center py-20 font-bold text-xl md:text-3xl gap-5 '>
